@@ -1,0 +1,58 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: #FFF8DB;
+  color: #3B3216;
+}
+
+.transition .plant-stalk,
+.transition .plant-flower,
+.transition .plant-fruit {
+  animation: transition 1s infinite cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  transform-origin: center center;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes transition {
+  10%, 30% {
+    transform: scale(0.9, 0.9);
+  }
+  20% {
+    transform: scale(0.8, 0.8);
+  }
+  50% {
+    transform: translate3d(-1px, 1px, 0) rotate(1deg);
+  }
+  55% {
+    transform: translate3d(1px, -1px, 0) rotate(-1deg);
+  }
+  60% {
+    transform: translate3d(-2px, 4px, 0) rotate(1deg);
+  }
+  65% {
+    transform: translate3d(2px, 2px, 0) rotate(-1deg);
+  }
+  70% {
+    transform: translate3d(-3px, -2px, 0) rotate(1deg);
+  }
+  75% {
+    transform: translate3d(3px, 0, 0) rotate(-1deg);
+  }
+  80% {
+    transform: translate3d(-4px, 0, 0) rotate(5deg);
+  }
+  85% {
+    transform: translate3d(4px, 0, 0) rotate(-5deg);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0) rotate(5deg) scale(1.2, 1.2);
+  }
+  95% {
+    transform: translate3d(5px, 0, 0) rotate(-5deg) scale(1.4, 1.4);
+  }
+}
+

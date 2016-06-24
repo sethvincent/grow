@@ -1,0 +1,39 @@
+{
+  "name": "grow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "bundle": "browserify index.js -t [ sheetify/transform -u sheetify-cssnext ] -p yo-yoify -t brfs -p [ css-extract -o bundle.css ] -o bundle.js",
+    "start": "budo index.js:bundle.js -l -P -- -p yo-yoify -t brfs -t [ sheetify/transform -u sheetify-cssnext ] -p [ css-extract -o bundle.css ]"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popuparcade/gardencade.git"
+  },
+  "author": "sethvincent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/popuparcade/gardencade/issues"
+  },
+  "homepage": "https://github.com/popuparcade/gardencade#readme",
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "budo": "^8.3.0",
+    "extract-css": "^1.0.3",
+    "insert-css": "^0.2.0",
+    "sheetify-cssnext": "^1.0.7",
+    "standard": "^7.1.2",
+    "yo-yoify": "^2.0.1"
+  },
+  "dependencies": {
+    "basscss": "^8.0.1",
+    "bel": "^4.3.1",
+    "choo": "^2.3.0",
+    "css-extract": "^1.1.0",
+    "normalize.css": "^4.1.1",
+    "sheetify": "^5.0.2",
+    "xtend": "^4.0.1"
+  }
+}
